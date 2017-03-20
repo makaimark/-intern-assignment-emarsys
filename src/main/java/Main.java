@@ -9,10 +9,9 @@ public class Main {
 
         try {
             destinations = CSVReader.readFromCSV();
+            OrderLogic.orderDestinations(destinations);
         } catch (IOException e) {
             System.out.println("File not found");
         }
-
-
     }
 }
