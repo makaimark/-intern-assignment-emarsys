@@ -8,13 +8,13 @@ public class CSVReader {
 
     private static String file = "src/main/resources/holiday.csv";
 
-    public static List<String> readFromCSV() throws IOException {
+    public static List<String[]> readFromCSV() throws IOException {
 
-        List<String> listOfDestinations = new ArrayList<>();
+        List<String[]> listOfDestinations = new ArrayList<>();
         String line;
         BufferedReader br = new BufferedReader(new FileReader(file));
         while((line = br.readLine()) != null) {
-            String oneLine = line;
+            String[] oneLine = line.split("=>");
             listOfDestinations.add(oneLine);
         }
         br.close();

@@ -4,11 +4,15 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+
+        List<String[]> destinations;
+
         try {
-            List<String> destinations = CSVReader.readFromCSV();
-            System.out.println(destinations);
+            destinations = CSVReader.readFromCSV();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("File not found");
         }
+
+
     }
 }
