@@ -10,14 +10,14 @@ public class CSVReader {
 
     public static List<String[]> readFromCSV() throws IOException {
 
-        List<String[]> listOfDestinations = new ArrayList<>();
+        List<String[]> destinationDependencies = new ArrayList<>();
         String line;
         BufferedReader br = new BufferedReader(new FileReader(file));
         while((line = br.readLine()) != null) {
             String[] oneLine = line.split("=>");
-            listOfDestinations.add(oneLine);
+            destinationDependencies.add(oneLine);
         }
         br.close();
-        return listOfDestinations;
+        return destinationDependencies;
     }
 }
