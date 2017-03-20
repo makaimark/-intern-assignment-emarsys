@@ -18,9 +18,7 @@ public class OrderLogic {
                 allDestinations.remove(allDestinations.indexOf(dependency[1]));
                 allDestinations.add(allDestinations.indexOf(dependency[0]), dependency[1]);
             }
-            System.out.println(allDestinations);
         }
-        //System.out.println(allDestinations);
         return allDestinations;
     }
 }
