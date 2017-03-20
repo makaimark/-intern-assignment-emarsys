@@ -20,4 +20,8 @@ public class CSVReader {
         br.close();
         return destinationDependencies;
     }
+
+    public static void setFile(String file) {
+        CSVReader.file = file;
+    }
 }
